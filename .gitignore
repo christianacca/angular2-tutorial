@@ -231,3 +231,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+app/**/*.js
+app/**/*.js.map
