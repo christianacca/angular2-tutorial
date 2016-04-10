@@ -3,10 +3,11 @@ import {Component} from "angular2/core";
 import {HighlightDirective} from "./highlight.directive";
 import {ClickMeComponent} from "./click-me.component";
 import {KeyupComponent} from "./keyup.component";
+import {ParentComponent} from "./parent.component";
 
 @Component({
     selector: "playground",
-    directives: [HighlightDirective, ClickMeComponent, KeyupComponent],
+    directives: [HighlightDirective, ClickMeComponent, KeyupComponent, ParentComponent],
     template: `
     <h2 [myHighlight]="color" [defaultColor]="'orange'">Playground</h2>
     <input type="radio" name="colors" (click)="color = 'blue'"/> Blue
@@ -18,6 +19,9 @@ import {KeyupComponent} from "./keyup.component";
     <div>
         <h4><code>my-keyup</code></h4>
         <my-keyup></my-keyup>
+    </div>
+    <div>
+        <parent></parent>
     </div>
     `
 })
